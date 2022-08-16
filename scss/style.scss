@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#bodyIndex{
+    height: 120vh;
+    margin: 0;
+    padding: 0;
+    header{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 5;
+        nav{
+            border: solid 0px;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: 20px;
+            div{
+                div{
+                    button{
+                        ion-icon {
+                            font-size: 32px;
+                        }
+                    }
+                    button:hover{
+                        text-decoration: underline white;
+                        transform: scale(1.05,1.05);
+                        transition: all 500ms;
+                    }
+                }
+            }
+        }
+        .offcanvas{
+            .articulosCarrito{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    .card-body{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #mainIndex{
+        margin-top: 4.5rem;
+        #presentacion{
+            height: 15rem;
+            background-color: rgba(0, 0, 0, 0.036);
+            border: solid 0px;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+        }
+        #contenido{
+            h3{
+                margin-top: 20px;
+                margin-bottom: 30px;
+                text-decoration: underline;
+                
+            }
+            #articulos{
+                .card{
+                    img{
+                        justify-self: center;
+                    }
+                    .card-body{
+                        .articulo{
+                            text-align: center;
+                        }
+                        .precio{
+                            text-align: center;
+                        }
+                        .add-to-cart{
+                            text-align: center;
+                            color: white;
+                            background-color: black;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            border: solid 0px;
+                            border-radius: 10px;
+                        }
+                        .add-to-cart:hover{
+                            text-decoration: underline white;
+                            transform: scale(1.05,1.05);
+                            transition: all 500ms;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

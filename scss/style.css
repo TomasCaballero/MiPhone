@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#bodyIndex {
+  height: 120vh;
+  margin: 0;
+  padding: 0;
+}
+#bodyIndex header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+#bodyIndex header nav {
+  border: solid 0px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 20px;
+}
+#bodyIndex header nav div div button ion-icon {
+  font-size: 32px;
+}
+#bodyIndex header nav div div button:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  transform: scale(1.05, 1.05);
+  transition: all 500ms;
+}
+#bodyIndex header .offcanvas .articulosCarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#bodyIndex header .offcanvas .articulosCarrito .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+#bodyIndex header .offcanvas .articulosCarrito .card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#bodyIndex header .offcanvas .articulosCarrito .card .card-body img {
+  width: 50px;
+}
+#bodyIndex #mainIndex {
+  margin-top: 4.5rem;
+}
+#bodyIndex #mainIndex #presentacion {
+  height: 15rem;
+  background-color: rgba(0, 0, 0, 0.036);
+  border: solid 0px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+#bodyIndex #mainIndex #contenido h3 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+#bodyIndex #mainIndex #contenido #articulos .card img {
+  justify-self: center;
+}
+#bodyIndex #mainIndex #contenido #articulos .card .card-body .articulo {
+  text-align: center;
+}
+#bodyIndex #mainIndex #contenido #articulos .card .card-body .precio {
+  text-align: center;
+}
+#bodyIndex #mainIndex #contenido #articulos .card .card-body .add-to-cart {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid 0px;
+  border-radius: 10px;
+}
+#bodyIndex #mainIndex #contenido #articulos .card .card-body .add-to-cart:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  transform: scale(1.05, 1.05);
+  transition: all 500ms;
+}/*# sourceMappingURL=style.css.map */
