@@ -14,7 +14,7 @@ const mostrarProductos = () =>{
         <div class="card" style="width: 20rem;">
             <img src="${producto.img}" class="card-img-top" alt="${producto.articulo}">
             <div class="card-body">
-                <h5 class="card-title">${producto.articulo}</h5>
+                <h5 class="card-title text-decoration-underline">${producto.articulo}</h5>
                 <p class="card-text">US$${producto.precio}</p>
                 <button class="btn btn-dark remove-btn">X</button>
             </div>

@@ -21,22 +21,26 @@
                         <li class="nav-item d-flex justify-content-center align-content-center">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item d-flex justify-content-center align-content-center">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
                         <li class="nav-item dropdown d-flex justify-content-center align-content-center">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Marcas
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item filtroGoogle">Google</a></li>
+                                <li><a class="dropdown-item filtroHuawei">Huawei</a></li>
+                                <li><a class="dropdown-item filtroApple">Apple</a></li>
+                                <li><a class="dropdown-item filtroNothing">Nothing</a></li>
+                                <li><a class="dropdown-item filtroOnePlus">OnePlus</a></li>
+                                <li><a class="dropdown-item filtroSamsung">Samsung</a></li>
+                                <li><a class="dropdown-item filtroXiaomi">Xiaomi</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item sinFiltro">Todas las marcas</a></li>
                             </ul>
                         </li>
                         <li class="nav-item d-flex justify-content-center align-content-center">
-                            <a class="nav-link disabled">Disabled</a>
+                            <form action="">
+                                <input type="text" placeholder="Precio maximo en dolares" class="d-flex justify-content-center align-content-center form-text p-1" style="width: 10.5rem;" id="filtroPrecio">
+                            </form>
                         </li>
                     </ul>
                     <ul>
@@ -55,7 +59,7 @@
             </div>
             <div class="py-2 d-flex align-content-center justify-content-center mx-auto mb-1">US$<div class="precioTotal"></div></div>
             <button id="comprar" class="btn btn-dark border-1 border-light w-25 py-2 d-flex align-content-center justify-content-center mx-auto mb-1" style="text-align: center;">Pagar</button>
-            <div class="offcanvas-body articulosCarrito">
+            <div class="offcanvas-body articulosCarrito bg-dark">
                 
             </div>
         </div>
@@ -75,6 +79,11 @@
         </div>
     </main>
 
+
+
+    <footer id="footerIndex" class="container bg-dark">
+        <div><strong>El footer</strong></div>
+    </footer>
     
 
     
