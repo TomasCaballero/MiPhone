@@ -70,6 +70,14 @@ const seleccionarArticulos = (prod) => {
 
 
 //------------------------------------------------------------------
+function filtrarProductos(e) {
+    if(e.innerHTML){
+        let celularesfiltrados = arrayProductos.filter(producto => producto.marca == e.innerHTML.value)
+        cargarProductos(celularesfiltrados)
+    }
+}
+
+
 let filtroGoogle = document.querySelector('.filtroGoogle')
 let filtroHuawei = document.querySelector('.filtroHuawei')
 let filtroApple = document.querySelector('.filtroApple')
@@ -80,17 +88,27 @@ let filtroXiaomi = document.querySelector('.filtroXiaomi')
 let sinFiltro = document.querySelector('.sinFiltro')
 
 
-sinFiltro.addEventListener('click', (e) => {
-    cargarProductos(stockRopa)
-})
-
-filtroGoogle.addEventListener('click', ()=>{
+filtroGoogle.addEventListener('click', (e)=>{
     filtrarProductos()
 })
-filtroHuawei.addEventListener('click', filtrarProductos)
-function filtrarProductos(e) {
-    if(e.innerHTML){
-        let celularesfiltrados = arrayProductos.filter(producto => producto.marca == e.innerHTML.value)
-        cargarProductos(celularesfiltrados)
-    }
-}
+filtroHuawei.addEventListener('click', (e)=>{
+    filtrarProductos()
+})
+filtroApple.addEventListener('click', (e)=>{
+    filtrarProductos()
+})
+filtroNothing.addEventListener('click', (e)=>{
+    filtrarProductos()
+})
+filtroOnePlus.addEventListener('click', (e)=>{
+    filtrarProductos()
+})
+filtroSamsung.addEventListener('click', (e)=>{
+    filtrarProductos()
+})
+filtroXiaomi.addEventListener('click', (e)=>{
+    filtrarProductos()
+})
+sinFiltro.addEventListener('click', (e) => {
+    cargarProductos(arrayProductos)
+})
