@@ -11,10 +11,10 @@ const mostrarProductos = () =>{
         const div = document.createElement('div')
         div.classList.add('divCarrito')
         div.innerHTML = `
-        <div class="card" style="width: 20rem;">
+        <div class="card" style="width: 17rem;">
             <img src="${producto.img}" class="card-img-top" alt="${producto.articulo}">
             <div class="card-body">
-                <h5 class="card-title text-decoration-underline">${producto.articulo}</h5>
+                <h5 class="card-title">${producto.articulo}</h5>
                 <p class="card-text">US$${producto.precio}</p>
                 <button class="btn btn-dark remove-btn">X</button>
             </div>
@@ -28,6 +28,7 @@ const mostrarProductos = () =>{
         boton.addEventListener('click', (e) => {
             eliminarProducto(producto)
             borrarDeLaVista(e)
+            actualizarPrecio()
         })
     })
 }

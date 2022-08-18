@@ -9,12 +9,13 @@ let arrayProductos = [
     {id:7, tipo:'celular', marca: 'Nothing', articulo:'Nothing Phone 1', precio: 470, img:'assets/img/celulares/nothingPhone1.webp'},
     {id:8, tipo:'celular', marca: 'OnePlus', articulo:'OnePlus 9 Pro', precio: 670, img:'assets/img/celulares/onePlus9Pro.jpg'},
     {id:9, tipo:'celular', marca: 'OnePlus', articulo:'OnePlus 10 Pro', precio: 1000, img:'assets/img/celulares/onePlus10Pro.jpg'},
-    {id:10, tipo:'celular', marca: 'Samsung', articulo:'Samsung S22', precio: 690, img:'assets/img/celulares/samsungS22.jpg'},
-    {id:11, tipo:'celular', marca: 'Samsung', articulo:'Samsung S22 Plus', precio: 995 , img:'assets/img/celulares/samsungS22Plus.png'},
+    {id:10, tipo:'celular', marca: 'Samsung', articulo:'Samsung S22', precio: 690, img:'assets/img/celulares/samsungS22Plus.png'},
+    {id:11, tipo:'celular', marca: 'Samsung', articulo:'Samsung S22 Plus', precio: 995 , img:'assets/img/celulares/samsungS22.jpg'},
     {id:12, tipo:'celular', marca: 'Samsung', articulo:'Samsung S22 Ultra', precio: 1200, img:'assets/img/celulares/samsungS22Ultra.jpg'},
     {id:13, tipo:'celular', marca: 'Xiaomi', articulo:'Xiaomi Mi 11', precio: 730, img:'assets/img/celulares/xiaomiMi11.jpg'},
     {id:14, tipo:'celular', marca: 'Xiaomi', articulo:'Xiaomi Mi 11 Ultra', precio: 1200, img:'assets/img/celulares/xiaomiMi11Ultra.jpeg'}
 ]
+
 
 // Inyectar HTML
 let contenedorDeArticulos = document.querySelector('#articulos');
@@ -31,7 +32,7 @@ const cargarProductos = (productos) => {
         div.innerHTML =`
         <div id="${producto.id}" class="card ${producto.marca} mb-4" style="width: 16rem;">
             <img src="${producto.img}" class="card-img-top img" alt="${producto.articulo}">
-            <div class="">${producto.marca}</div>
+            <div class="marcaParaFiltrar d-none">${producto.marca}</div>
             <div class="card-body d-flex flex-column align-content-center justify-content-center">
                 <h5 class="articulo">${producto.articulo}</h5>
                 <p class="precio">US$${producto.precio}</p>
@@ -46,6 +47,7 @@ const cargarProductos = (productos) => {
             
         boton.addEventListener('click', ()=>{
             seleccionarArticulos(producto);
+            mostrarProductos();
         })
     })
 }
@@ -70,45 +72,3 @@ const seleccionarArticulos = (prod) => {
 
 
 //------------------------------------------------------------------
-function filtrarProductos(e) {
-    if(e.innerHTML){
-        let celularesfiltrados = arrayProductos.filter(producto => producto.marca == e.innerHTML.value)
-        cargarProductos(celularesfiltrados)
-    }
-}
-
-
-let filtroGoogle = document.querySelector('.filtroGoogle')
-let filtroHuawei = document.querySelector('.filtroHuawei')
-let filtroApple = document.querySelector('.filtroApple')
-let filtroNothing = document.querySelector('.filtroNothing')
-let filtroOnePlus = document.querySelector('.filtroOnePlus')
-let filtroSamsung = document.querySelector('.filtroSamsung')
-let filtroXiaomi = document.querySelector('.filtroXiaomi')
-let sinFiltro = document.querySelector('.sinFiltro')
-
-
-filtroGoogle.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-filtroHuawei.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-filtroApple.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-filtroNothing.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-filtroOnePlus.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-filtroSamsung.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-filtroXiaomi.addEventListener('click', (e)=>{
-    filtrarProductos()
-})
-sinFiltro.addEventListener('click', (e) => {
-    cargarProductos(arrayProductos)
-})
